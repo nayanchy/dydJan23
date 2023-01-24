@@ -1,0 +1,114 @@
+<html>
+<head>
+  <title>AI Cover Letter Generator</title>
+</head>
+<style>
+    /* Add some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    /* Style the form */
+    form {
+      width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    /* Style the form labels */
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    /* Style the form inputs */
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* Style the submit button */
+    button[type="button"] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Style the cover letter */
+    #cover-letter {
+      margin: 50px auto;
+      width: 600px;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 4px;
+    }
+  </style>
+<body>
+
+<h1>AI Cover Letter Generator</h1>
+
+<form id="cover-letter-form">
+    <label for="name">Your name:</label>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="position">Position you are applying for:</label>
+    <input type="text" id="position" name="position"><br>
+
+    <label for="company">Company you are applying to:</label>
+    <input type="text" id="company" name="company"><br>
+
+    <label for="qualifications">What qualifications do you have that make you a good fit for this position?</label>
+    <textarea id="qualifications" name="qualifications"></textarea><br>
+
+    <label for="experience">What relevant experience do you have for this position?</label>
+    <textarea id="experience" name="experience"></textarea><br>
+
+    <label for="motivation">Why are you motivated to work for this company?</label>
+    <textarea id="motivation" name="motivation"></textarea><br>
+
+    <button type="button" onclick="generateCoverLetter()">Generate Cover Letter</button>
+</form>
+
+<div id="cover-letter"></div>
+
+<script>
+    const generateCoverLetter = () => {
+        const name = document.getElementById("name").value;
+        const position = document.getElementById("position").value;
+        const company = document.getElementById("company").value;
+        const qualifications = document.getElementById("qualifications").value;
+        const experience = document.getElementById("experience").value;
+        const motivation = document.getElementById("motivation").value;
+
+        let coverLetter = `Dear Hiring Manager,<br>`;
+        coverLetter += `I am writing to express my interest in the ${position} position at ${company}. My name is ${name} and I believe that my qualifications and experience make me a strong fit for this role.<br>`;
+        coverLetter += `I have the following qualifications that make me a good fit for this position:<br>`;
+        coverLetter += `<pre>${qualifications}</pre><br>`;
+        coverLetter += `I also have the following relevant experience:<br>`;
+        coverLetter += `<pre>${experience}</pre><br>`;
+        coverLetter += `I am particularly motivated to work for ${company} because:<br>`;
+        coverLetter += `<pre>${motivation}</pre><br>`;
+        coverLetter += `Thank you for considering my application. I look forward to the opportunity to discuss my qualifications further.<br>`;
+        coverLetter += `Sincerely,<br> ${name}`;
+
+        document.getElementById("cover-letter").innerHTML = coverLetter;
+    }
+</script>
+
+</body>
+</html>
