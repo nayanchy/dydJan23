@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <header class="header-container">
@@ -19,7 +23,102 @@
     <section class="hero">
         <h1>This is our hero section</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Totam corporis dicta earum laudantium.</p>
-        <a href="#" class="hero-button">know more</a>
+        <a href="#" class="main-button hero-button">know more</a>
     </section>
+
+    <section class="about section-wrapper">
+        <div class="heading-container">
+            <h1 class="heading">About</h1>
+            <span class="border-bottom"></span>
+            <h4 class="subheading">This is a subheading</h4>
+        </div>
+        <div class="about-cards">
+            <div class="card">
+                <i class="fa-solid fa-globe card-icon"></i>
+                <h2 class="card-title">Web Design</h2>
+                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur saepe quisquam, iure dolore labore, quae at vero alias accusantium ad blanditiis enim aut libero quod, beatae hic corporis eos ipsa.</p>
+                <a href="#" class="main-button card-button">More Info</a>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-palette card-icon"></i>
+                <h2 class="card-title">Graphic Design</h2>
+                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur saepe quisquam, iure dolore labore, quae at vero alias accusantium ad blanditiis enim aut libero quod, beatae hic corporis eos ipsa.</p>
+                <a href="#" class="main-button card-button">More Info</a>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-bullhorn card-icon"></i>
+                <h2 class="card-title">Digital Marketing</h2>
+                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur saepe quisquam, iure dolore labore, quae at vero alias accusantium ad blanditiis enim aut libero quod, beatae hic corporis eos ipsa.</p>
+                <a href="#" class="main-button card-button">More Info</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog dark-section section-wrapper">
+        <div class="heading-container white-text">
+            <h1 class="heading">Blog</h1>
+            <span class="border-bottom"></span>
+            <h4 class="subheading">Read our latest blog posts</h4>
+        </div>
+
+        <div class="blog-cards">
+            <div class="card">
+                <img src="./img/hero.jpg" alt="" class="blog-image">
+                <a href="#" class="title-link">
+                    <h2 class="blog-title">Web Design</h2>
+                </a>
+                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur saepe quisquam, iure dolore labore, quae at vero alias accusantium ad blanditiis enim aut libero quod, beatae hic corporis eos ipsa.</p>
+                <a href="#" class="main-button card-button">More Info</a>
+            </div>
+            <div class="card">
+                <img src="./img/hero.jpg" alt="" class="blog-image">
+                <a href="#" class="title-link">
+                    <h2 class="blog-title">Graphic Design</h2>
+                </a>
+                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur saepe quisquam, iure dolore labore, quae at vero alias accusantium ad blanditiis enim aut libero quod, beatae hic corporis eos ipsa.</p>
+                <a href="#" class="main-button card-button">More Info</a>
+            </div>
+            <div class="card">
+                <img src="./img/hero.jpg" alt="" class="blog-image">
+                <a href="#" class="title-link">
+                    <h2 class="blog-title">Digital Marketing</h2>
+                </a>
+                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur saepe quisquam, iure dolore labore, quae at vero alias accusantium ad blanditiis enim aut libero quod, beatae hic corporis eos ipsa.</p>
+                <a href="#" class="main-button card-button">More Info</a>
+            </div>
+        </div>
+    </section>
+        
+    <section class="contact section-wrapper">
+        <div class="heading-container">
+            <h1 class="heading">Contact</h1>
+            <span class="border-bottom"></span>
+            <h4 class="subheading">Contact us from here</h4>
+        </div>
+        <div class="contact-form-container">
+            <form method="post" autocomplete="on" class="form-container">
+                <div class="form-group">
+                    <input type="text" name="fname" id="fname" class="textfield" required placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="lname" id="lname" class="textfield" required placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="Email" class="textfield">
+                </div>
+                
+                <div class="form-group">
+                    <textarea name="message" id="message" rows="10" cols="10" placeholder="type your message here"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Contact Us" class="submit-btn">
+                </div>
+                
+            </form>
+
+            <div id="form-data"></div>
+        </div>
+    </section>
+    <script src="./script.js"></script>
 </body>
 </html>

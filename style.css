@@ -6,6 +6,8 @@ body{
 .header-container{
     background-color: #2c2c54;
     padding:10px 0;
+    position: sticky;
+    top:0;
 }
 .logo{
     text-align: center;
@@ -25,7 +27,7 @@ body{
 }
 
 .hero{
-    background-image: url("./img/hero.jpg");
+    background:linear-gradient(126deg, rgba(9,62,124,0) 0%, rgba(1,7,9,0.70640756302521) 0%), url("./img/hero.jpg");
     height:80vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,7 +35,8 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color:#fff
+    color:#fff;
+    background-attachment: fixed;
 }
 
 .hero h1{
@@ -48,17 +51,114 @@ body{
     text-align: center;
     font-size: 20px;
 }
-.hero-button{
+
+.main-button{
     text-decoration: none;
     background-color:#000;
     padding:10px 20px;
     color:#fff;
     text-transform: uppercase;
-    transition: 0.5s;
+    transition: 800ms;
 }
 
+.card-button:hover{
+    background-color: transparent;
+    border:1px solid #333;
+    color:#333
+}
 .hero-button:hover{
     background-color: #2c2c54;
-    transform:translateY(-10px);
-    
+    transform:translateY(-10px); 
+}
+
+.section-wrapper{
+    padding: 120px 40px;
+}
+
+.about-cards, .blog-cards{
+    display: flex;
+    gap:50px;
+}
+
+.white-text{
+    color: #fff;
+}
+
+.heading{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight:700;
+    margin:0;
+}
+
+.border-bottom{
+    width:200px;
+    border-bottom: 2px solid #ccc;
+    padding-top:10px;
+}
+
+.subheading{
+    font-size:24px;
+    font-weight: 400;
+}
+
+.heading-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card{
+    background-color: #dddde5;
+    min-height:400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:40px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px -1px rgba(0,0,0,0.42);
+}
+
+.card-icon{
+    font-size:36px;
+}
+
+.card-description{
+    padding-bottom:20px;
+}
+
+.dark-section{
+    background: #29292c;
+}
+
+.blog-image{
+    width: 100%;
+}
+
+.title-link{
+    text-decoration: none;
+}
+
+.blog-title{
+    font-size:36px;
+    font-weight: 500;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+input, textarea{
+    width: 100%;
+}
+
+.textfield{
+    height: 40px;
+}
+.form-group{
+    width:50%;
 }
